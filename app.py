@@ -18,13 +18,13 @@ CLASS_LABEL=["nowildfire", "wildfire"]
 CLASS_LABEL.sort()
 
 
-
-
-
-
-
-
-
+@st.cache_resource
+def get_MobileNetV2_model():
+    base_model = keras.applications.MobileNetV2(include_top=False, weights="imagenet", input_shape=(224, 224, 3), classes=1000, classifier_activation="softmax")
+    x = base_model.output
+    x = GlobalAveragePooling2D()(x)
+    model_frozen = Model(inputs=base_model.input, outputs=x)
+    return model_frozen
 
 
 
@@ -39,11 +39,13 @@ def load_sklearn_models(model_path):
 
 def featurization(image_path, model):
     img = tf.keras.preprocessing.image.load_img(image_path, target_size=IMAGE_SIZE)
-    img_array = tf.keras.preprocessing.img_to_array(img)
+    img_array = tf.keras.preprocessing.image.img_to_array(img)
     img_batch = np.expand_dims(img_array, axis=0)
     img_preprocessed = preprocess_input(img_batch)
     predictions = model.predict(img_preprocessed)
     return predictions
+
+
 
 
 
@@ -53,7 +55,9 @@ classification_model = load_sklearn_models("best_ml_model")
 
 
 def run_app():
-    st.title("Wildfire Detection")
+    st.title("Wildfire Prediction")
+    st.subheader("Predict whether there is a chance of your satellite image's forest to have a wildfire")
+    st.markdown("We use a comprehensive model with a 97 percent accuracy to ensure that your photo is correctly predicted to have a chance of a wildfire or not, completely for free.")
     st.image(IMAGE_ADDRESS, caption="Wildfire Classification Satellite Images")
     st.subheader("Please upload your satellite image")
     image = st.file_uploader("Please upload your satellite image", type=["jpg", "png", "jpeg"], accept_multiple_files=False, help="Upload an Image")
