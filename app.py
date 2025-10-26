@@ -196,7 +196,7 @@ def show_detection_page():
     st.markdown("---")
 
     # Display example wildfire image
-    st.image(IMAGE_ADDRESS, caption="Example: Wildfire satellite imagery", use_column_width=True)
+    st.image(IMAGE_ADDRESS, caption="Example: Wildfire satellite imagery", use_container_width=True)
 
     st.markdown("---")
 
@@ -213,7 +213,7 @@ def show_detection_page():
         with col1:
             st.markdown("#### Input Image")
             user_image = Image.open(uploaded_file)
-            st.image(user_image, use_column_width=True)
+            st.image(user_image, use_container_width=True)
             user_image.save(IMAGE_NAME)
 
             st.caption(f"Filename: {uploaded_file.name}")
