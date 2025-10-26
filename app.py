@@ -88,6 +88,7 @@ st.markdown("""
         padding: 1rem 1.5rem;
         margin: 0.75rem 0;
         border-radius: 4px;
+        color: #1f1f1f;
     }
 
     #MainMenu {visibility: hidden;}
@@ -256,7 +257,6 @@ def show_detection_page():
                     """, unsafe_allow_html=True)
 
                 st.markdown("##### Analysis Details")
-                st.text(f"Analysis Time: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
                 st.text(f"Model: MobileNetV2 + MLP Classifier")
                 st.text(f"Accuracy: 97%")
 
