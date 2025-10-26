@@ -190,8 +190,16 @@ def run_app():
         show_about_page()
 
 def show_detection_page():
-    st.markdown('<p class="main-title">Wildfire Detection System</p>', unsafe_allow_html=True)
-    st.markdown('<p class="subtitle">Advanced satellite imagery analysis for early wildfire detection</p>', unsafe_allow_html=True)
+    st.markdown('<p class="main-title">FIRES</p>', unsafe_allow_html=True)
+    st.markdown('<p class="subtitle">Forest Ignition and Risk Evaluation System</p>', unsafe_allow_html=True)
+
+    st.markdown("---")
+
+    st.markdown("""
+    **FIRES** is an advanced AI-powered wildfire detection system that uses satellite imagery analysis
+    to identify potential wildfires with 97% accuracy. Upload satellite imagery to get immediate analysis
+    and risk assessment.
+    """)
 
     st.markdown("---")
 
@@ -344,7 +352,7 @@ def show_about_page():
     st.markdown("""
     ### Overview
 
-    FIRES (Forest Fire Identification and Risk Evaluation System) is an advanced machine learning system
+    FIRES (Forest Ignition and Risk Evaluation System) is an advanced machine learning system
     designed to detect wildfires from satellite imagery with high accuracy. The system leverages transfer
     learning and deep neural networks to provide rapid, automated fire detection capabilities.
 
