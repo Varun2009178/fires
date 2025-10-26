@@ -30,14 +30,14 @@ st.markdown("""
     .main-title {
         font-size: 2.5rem;
         font-weight: 700;
-        color: #1f1f1f;
+        color: #4a5568;
         margin-bottom: 0.5rem;
         letter-spacing: -0.02em;
     }
 
     .subtitle {
         font-size: 1.1rem;
-        color: #666;
+        color: #718096;
         margin-bottom: 2rem;
         font-weight: 400;
     }
