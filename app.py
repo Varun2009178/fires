@@ -195,6 +195,11 @@ def show_detection_page():
 
     st.markdown("---")
 
+    # Display example wildfire image
+    st.image(IMAGE_ADDRESS, caption="Example: Wildfire satellite imagery", use_column_width=True)
+
+    st.markdown("---")
+
     # File uploader
     uploaded_file = st.file_uploader(
         "Upload satellite image for analysis",
