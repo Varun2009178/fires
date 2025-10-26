@@ -335,13 +335,23 @@ def show_analytics_page():
     st.markdown("---")
     st.markdown("### Export Data")
 
-    csv = df.to_csv(index=False)
-    st.download_button(
-        label="Download Full History (CSV)",
-        data=csv,
-        file_name=f"fire_detection_history_{datetime.now().strftime('%Y%m%d')}.csv",
-        mime="text/csv"
-    )
+    col1, col2 = st.columns(2)
+
+    with col1:
+        csv = df.to_csv(index=False)
+        st.download_button(
+            label="Download Full History (CSV)",
+            data=csv,
+            file_name=f"fire_detection_history_{datetime.now().strftime('%Y%m%d')}.csv",
+            mime="text/csv"
+        )
+
+    with col2:
+        if st.button("Clear All History", type="secondary"):
+            if os.path.exists(HISTORY_FILE):
+                os.remove(HISTORY_FILE)
+                st.success("History cleared successfully!")
+                st.rerun()
 
 def show_about_page():
     st.markdown('<p class="main-title">About FIRES</p>', unsafe_allow_html=True)
