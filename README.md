@@ -1,6 +1,6 @@
 # 🔥 FIRES (Forest Ignition and Risk Evaluation System):
 
-**FIRES** is a machine learning–powered web application designed to **predict forest fires from satellite imagery**. By analyzing environmental and spatial data, FIRES identifies areas at high risk for wildfires — enabling early prevention and saving lives, ecosystems, and infrastructure.
+**FIRES** is a machine learning–powered web application designed to **predict forest fires from satellite imagery**. By analyzing environmental and spatial data, FIRES identifies areas at high risk for wildfires, enabling early prevention and saving lives, ecosystems, and infrastructure.
 
 ---
 
