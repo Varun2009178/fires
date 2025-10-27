@@ -4,7 +4,7 @@
 
 ---
 
-## 🌍 Overview
+## Overview
 
 FIRES allows users to **upload satellite images** of a specific region to determine whether that area is at risk of a wildfire.  
 The system uses a **custom-trained convolutional neural network (MobileNetV2 + MLP)** that achieves **97% accuracy** on validation data, significantly outperforming traditional risk prediction models.
@@ -16,7 +16,7 @@ After processing the input image, FIRES provides:
 
 ---
 
-## 🧠 Features
+## Features
 
 -  **Satellite Image Analysis:** Upload an image of a region to detect potential wildfire risks.  
 -  **High-Accuracy Predictions:** 97% detection accuracy with MobileNetV2 + Multi-Layer Perceptron architecture.  
@@ -26,7 +26,7 @@ After processing the input image, FIRES provides:
 
 ---
 
-## ⚙️ Tech Stack
+## Tech Stack
 
 | Category | Technologies |
 |-----------|--------------|
@@ -38,7 +38,7 @@ After processing the input image, FIRES provides:
 
 ---
 
-## 📈 Model Performance
+## Model Performance
 
 | Metric | Result |
 |--------|--------|
