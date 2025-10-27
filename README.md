@@ -82,7 +82,7 @@ FIRES was inspired by the increasing frequency of wildfires and the devastating 
 ## Author
 
 **Developer:** Varun Nukala  
-**Email:** [varun.k.nukala@gmail.com@example.com]  
+**Email:** [varun.k.nukala@gmail.com]  
 **Project:** Congressional App Challenge Submission 2025  
 **Location:** Helotes, Texas
 
