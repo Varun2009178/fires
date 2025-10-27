@@ -32,7 +32,7 @@ After processing the input image, FIRES provides:
 |-----------|--------------|
 | **Frontend** | CSS / Python (Streamlit) |
 | **Backend** | Python |
-| **Machine Learning** | TensorFlow, Keras, NumPy, OpenCV |
+| **Machine Learning** | TensorFlow, Keras, NumPy |
 | **Model Architecture** | MobileNetV2 + MLP Classifier |
 | **Deployment** | Localhost / Streamlit Cloud |
 
